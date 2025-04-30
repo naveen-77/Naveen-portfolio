@@ -91,31 +91,3 @@ document.querySelectorAll('.gallery-thumbnails img').forEach(thumb => {
         this.src = tempSrc;
     });
 });
- document.querySelector("form").addEventListener("submit", function(e) {
-    e.preventDefault();
-
-    const form = e.target;
-    const data = {
-      name: form.name.value,
-      email: form.email.value,
-      subject: form.subject.value,
-      message: form.message.value
-    };
-
-    fetch("https://script.google.com/macros/s/AKfycbzdYSqqdSZL0TndJ9m-_gyHCviLqRWNUpmAhY4zwHF1c4s9NPaQoOLekej2EU-qOpNICw/exec", {
-      method: "POST",
-      body: JSON.stringify(data),
-      headers: {
-        "Content-Type": "application/json"
-      }
-    })
-    .then(res => res.text())
-    .then(data => {
-      alert("Form submitted successfully!");
-      form.reset();
-    })
-    .catch(err => {
-      alert("Error submitting form");
-      console.error(err);
-    });
-  });
