@@ -92,7 +92,7 @@ document.querySelectorAll('.gallery-thumbnails img').forEach(thumb => {
     });
 });
 //new
-const scriptURL = 'https://script.google.com/macros/s/AKfycbyXp-hU2KukjWtZjlPuemMo4R9KPPr0E8JVrooJ9jpr66MnJWeMhEsa6vfOZMioWndClA/exec'
+const scriptURL = 'https://script.google.com/macros/library/d/1GOqyS7pWn1oRX4E_5Wq1-MIhT1V4vW6wv1hO0kmZcDya88_1axI8Z6s7/2'
             const form = document.forms['google-sheet']
           
             form.addEventListener('submit', e => {
